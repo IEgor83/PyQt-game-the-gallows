@@ -33,8 +33,14 @@ class Ui_MainWindow(object):
         self.pushButton.setGeometry(QtCore.QRect(470, 90, 93, 28))
         self.pushButton.setObjectName("pushButton")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(240, 150, 331, 331))
+        self.groupBox.setGeometry(QtCore.QRect(240, 140, 331, 331))
         self.groupBox.setObjectName("groupBox")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(330, 490, 161, 41))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setObjectName("pushButton_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 850, 26))
@@ -54,6 +60,7 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Или создайте свою игру"))
         self.pushButton.setText(_translate("MainWindow", "Создать"))
         self.groupBox.setTitle(_translate("MainWindow", "Сервера:"))
+        self.pushButton_2.setText(_translate("MainWindow", "Назад"))
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\Dell\PycharmProjects\PyQt-game-the-gallows\windows\rules.ui'
+# Form implementation generated from reading ui file 'C:\Users\Dell\PycharmProjects\PyQt-game-the-gallows\rules.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.0
 #
@@ -14,6 +14,7 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(850, 759)
         self.label = QtWidgets.QLabel(Form)
+        self.label.setEnabled(True)
         self.label.setGeometry(QtCore.QRect(200, 20, 401, 61))
         font = QtGui.QFont()
         font.setPointSize(21)
@@ -21,8 +22,15 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.textEdit = QtWidgets.QTextEdit(Form)
-        self.textEdit.setGeometry(QtCore.QRect(50, 110, 751, 611))
+        self.textEdit.setEnabled(False)
+        self.textEdit.setGeometry(QtCore.QRect(50, 110, 751, 421))
         self.textEdit.setObjectName("textEdit")
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setGeometry(QtCore.QRect(290, 560, 241, 51))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -41,6 +49,7 @@ class Ui_Form(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\"><br /></span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:138%;\"><span style=\" font-family:\'JetBrains Mono,monospace\'; font-size:15pt; color:#000000; background-color:transparent;\">Задача второго игрока - отгадать загаданное слово. Он вводит любую букву. Если эта буква в слове есть - ведущий вписывает её своё на место. Если нет, то букву пишут в стороне, чтобы не повторяться, и начинают рисовать &quot;виселицу&quot;. Затем, с каждой неугаданной буквой, дорисовывают виселицу и человечка на ней. За эти несколько попыток игрок должен угадать слово. Если не получилось - проиграл.</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\"><br /></span></p></body></html>"))
+        self.pushButton.setText(_translate("Form", "Назад"))
 
 
 if __name__ == "__main__":

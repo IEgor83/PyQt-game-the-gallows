@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'C:\Users\Dell\PycharmProjects\PyQt-game-the-gallows\enter.ui'
+# Form implementation generated from reading ui file 'C:\Users\Dell\PycharmProjects\PyQt-game-the-gallows\windows\enter.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.0
 #
