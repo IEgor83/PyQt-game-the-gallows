@@ -11,9 +11,13 @@ class Servers(QMainWindow, servers.Ui_MainWindow):
         self.word_window = None
         self.pushButton_2.clicked.connect(self.back)
         self.pushButton.clicked.connect(self.create_server)
+        self.pushButton_3.clicked.connect(self.update_servers)
 
     def back(self):
         pass
 
     def create_server(self):
+        pass
+
+    def update_servers(self):
         pass

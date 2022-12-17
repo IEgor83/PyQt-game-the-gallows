@@ -6,7 +6,7 @@ import threading
 
 # данные для подключения
 host = '127.0.0.1'
-port = 5070
+port = 5080
 
 # Когда мы определяем наш сокет, нам нужно передать два параметра.
 # Они определяют тип сокета, который мы хотим использовать.
@@ -72,10 +72,10 @@ def handle(client):
 # Когда мы будем готовы запустить наш сервер,
 # мы выполним функцию receive()
 def receive():
-    if len(clients) < 1:
-        # Она также запускает бесконечный цикл while,
-        # который постоянно принимает новые подключения от клиентов.
-        while True:
+    # Она также запускает бесконечный цикл while,
+    # который постоянно принимает новые подключения от клиентов.
+    while True:
+        if len(nicknames) < 2:
             # Принимаем подключение
             client, address = server.accept()
             print("Connected with {}".format(str(address)))
@@ -102,6 +102,8 @@ def receive():
             print("Nickname is {}".format(nickname))
             broadcast("{} joined! ".format(nickname).encode('ascii'))
             client.send('Connected to server!'.encode('ascii'))
+            print(clients)
+            print(nicknames)
 
             # Наконец, мы запускаем новый поток,
             # который запускает ранее реализованную
@@ -111,7 +113,7 @@ def receive():
 
 
 # очищаем консоль для красоты
-os.system('clear')
+os.system('cls')
 
 # Теперь мы можем просто запустить эту функцию.
 receive()

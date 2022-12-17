@@ -9,11 +9,51 @@ from windows_py_files import game_window
 
 
 class Game(QMainWindow, game_window.Ui_MainWindow):
-    def __init__(self, word='None'):
+    def __init__(self, word='None', description='', role='player'):
         super(Game, self).__init__()
         self.setupUi(self)
 
-        self.word = " ".join('работа'.split())
+        if role == 'user':
+            self.A_1.setEnabled(False)
+            self.A_2.setEnabled(False)
+            self.A_3.setEnabled(False)
+            self.A_4.setEnabled(False)
+            self.A_5.setEnabled(False)
+            self.A_6.setEnabled(False)
+            self.A_7.setEnabled(False)
+            self.A_8.setEnabled(False)
+            self.A_9.setEnabled(False)
+            self.A_10.setEnabled(False)
+            self.A_11.setEnabled(False)
+            self.A_12.setEnabled(False)
+            self.A_13.setEnabled(False)
+            self.A_14.setEnabled(False)
+            self.A_15.setEnabled(False)
+            self.A_16.setEnabled(False)
+            self.A_17.setEnabled(False)
+            self.A_18.setEnabled(False)
+            self.A_19.setEnabled(False)
+            self.A_20.setEnabled(False)
+            self.A_21.setEnabled(False)
+            self.A_22.setEnabled(False)
+            self.A_23.setEnabled(False)
+            self.A_24.setEnabled(False)
+            self.A_25.setEnabled(False)
+            self.A_26.setEnabled(False)
+            self.A_27.setEnabled(False)
+            self.A_28.setEnabled(False)
+            self.A_29.setEnabled(False)
+            self.A_30.setEnabled(False)
+            self.A_31.setEnabled(False)
+            self.A_32.setEnabled(False)
+            self.A_33.setEnabled(False)
+
+        self.word = " ".join(word.split())
+        self.description = f'Описание: {description}'
+        self.role = role
+
+        self.textBrowser.append(self.description)
+
         self.stage = 0
         s = []
         for i in self.word:
@@ -76,67 +116,14 @@ class Game(QMainWindow, game_window.Ui_MainWindow):
         self.picture_stage.append(QLineF(90, 150, 70, 180))
         self.picture_stage.append(QLineF(90, 150, 110, 180))
 
+        self.pushButton.clicked.connect(self.send_message)
+        self.word_window = None
+
+    def send_message(self):
+        pass
+
     def check_letter(self, num, but):
-        but.setEnabled(False)
-        indexes = []
-        for i, letter in enumerate(self.word.upper(), 0):
-            if num == letter:
-                indexes.append(i)
-        if indexes:
-            but.setStyleSheet('QPushButton {background-color: green; color: white}')
-            line = self.lineEdit.text().replace('   ', ' / ').split()
-            for elem in indexes:
-                line[elem] = num
-            line = ' '.join(line).replace('/', ' ')
-            self.lineEdit.setText(line)
-            if not '?' in line:
-                msg = QMessageBox(self)
-                msg.setStyleSheet("QLabel{margin-left: -70px}")
-                msg.setWindowTitle("Win")
-                msg.setText("Вы выиграли!")
-                msg.setIcon(QMessageBox.Icon.Information)
-                msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
-                button_one = msg.button(QMessageBox.StandardButton.Yes)
-                button_one.setText('Новая игра')
-                button_two = msg.button(QMessageBox.StandardButton.No)
-                button_two.setText('Выход')
-                btn = msg.exec()
-                if btn == QMessageBox.StandardButton.Yes:
-                    print("Yes!")
-                else:
-                    print("No!")
-        else:
-            self.stage += 1
-            if self.stage != 5:
-                if self.stage != 7:
-                    self.scene.addLine(self.picture_stage[self.stage-1],
-                                       QPen(Qt.GlobalColor.black, 4, Qt.PenStyle.SolidLine))
-                else:
-                    self.scene.addEllipse(self.picture_stage[self.stage - 1],
-                                       QPen(Qt.GlobalColor.black, 4, Qt.PenStyle.SolidLine))
-            else:
-                self.scene.addLine(self.picture_stage[self.stage - 1][0],
-                                   QPen(Qt.GlobalColor.black, 4, Qt.PenStyle.SolidLine))
-                self.scene.addLine(self.picture_stage[self.stage - 1][1],
-                                   QPen(Qt.GlobalColor.black, 4, Qt.PenStyle.SolidLine))
-            self.label_2.setText(f'Виселица :  {self.stage}/12')
-            but.setStyleSheet('QPushButton {background-color: red; color: white}')
-            if self.stage == 12:
-                self.lineEdit.setText(' '.join(list(self.word)))
-                msg = QMessageBox(self)
-                msg.setWindowTitle("Lose")
-                msg.setText("Вы проиграли!")
-                msg.setIcon(QMessageBox.Icon.Information)
-                msg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
-                button_one = msg.button(QMessageBox.StandardButton.Yes)
-                button_one.setText('Новая игра')
-                button_two = msg.button(QMessageBox.StandardButton.No)
-                button_two.setText('Выход')
-                btn = msg.exec()
-                if btn == QMessageBox.StandardButton.Yes:
-                    print("Yes!")
-                else:
-                    print("No!")
+        pass
 
 
 if __name__ == "__main__":
