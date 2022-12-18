@@ -53,9 +53,15 @@ def create_game(client, adr):
                 client.send(adr.encode())
                 handle(client, 1, adr)
             elif gm[0] == 'connect':
-                games[gm[1]].append(adr)
-                games[gm[1]].append(nicknames[adr][0])
-                handle(client, 2, adr)
+                if len(games[gm[1]]) > 4:
+                    client.send(str(games).encode())
+                    continue
+                else:
+                    client.send('YES'.encode())
+                    games[gm[1]].append(adr)
+                    games[gm[1]].append(nicknames[adr][0])
+                    print(games)
+                    handle(client, 2, adr)
             else:
                 client.send(str(games).encode())
         except:

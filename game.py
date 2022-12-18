@@ -86,14 +86,24 @@ class ServersMain(Servers):
         self.groupBox.setLayout(self.group_box_layout)
 
     def enter_the_game(self, adr):
+        global games
         global game
         game = adr
         print(widget.currentIndex())
         client.send(f'connect_{adr}'.encode())
-        widget.addWidget(GameMain(games[adr][0], games[adr][1], 'player'))
-        widget.setCurrentIndex(widget.currentIndex() + 1)
-        widget.setFixedWidth(850)
-        widget.setFixedHeight(650)
+        ans = client.recv(1024).decode()
+        if ans == 'YES':
+            widget.addWidget(GameMain(games[adr][0], games[adr][1], 'player'))
+            widget.setCurrentIndex(widget.currentIndex() + 1)
+            widget.setFixedWidth(850)
+            widget.setFixedHeight(650)
+        else:
+            ans = ast.literal_eval(ans)
+            games = ans
+            widget.addWidget(ServersMain())
+            widget.setCurrentIndex(widget.currentIndex() + 1)
+            widget.removeWidget(widget.widget(2))
+            print('nice', widget.currentIndex())
 
     def back(self):
         widget.setCurrentIndex(widget.currentIndex() - 2)
