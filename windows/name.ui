@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
@@ -21,6 +24,11 @@
      <width>251</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(83, 145, 65);
+border: 2px solid;
+borde-radius: 6px;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -57,6 +65,9 @@
     <font>
      <pointsize>14</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(209, 209, 209);</string>
    </property>
    <property name="text">
     <string>OK</string>

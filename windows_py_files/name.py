@@ -13,8 +13,12 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(453, 172)
+        Form.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lineEdit = QtWidgets.QLineEdit(Form)
         self.lineEdit.setGeometry(QtCore.QRect(190, 44, 251, 41))
+        self.lineEdit.setStyleSheet("border-color: rgb(83, 145, 65);\n"
+"border: 2px solid;\n"
+"borde-radius: 6px;")
         self.lineEdit.setObjectName("lineEdit")
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(20, 40, 161, 41))
@@ -28,6 +32,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("background-color: rgb(209, 209, 209);")
         self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Form)

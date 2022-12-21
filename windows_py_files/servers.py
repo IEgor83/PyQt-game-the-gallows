@@ -13,6 +13,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(850, 600)
+        MainWindow.setStyleSheet("#MainWindow{border-image:url(C:/Users/Dell/PycharmProjects/PyQt-game-the-gallows/images/1579273115_39-83.jpg)}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)

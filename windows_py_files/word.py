@@ -13,6 +13,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(600, 281)
+        Form.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(180, 10, 231, 61))
         font = QtGui.QFont()
@@ -25,6 +26,9 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("border-color: rgb(83, 145, 65);\n"
+"border: 2px solid;\n"
+"border-radius: 6px;")
         self.lineEdit.setObjectName("lineEdit")
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(100, 90, 71, 31))
@@ -37,6 +41,9 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setStyleSheet("border-color: rgb(83, 145, 65);\n"
+"border: 2px solid;\n"
+"border-radius: 6px;")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.label_3 = QtWidgets.QLabel(Form)
         self.label_3.setGeometry(QtCore.QRect(60, 147, 111, 31))
@@ -49,6 +56,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("background-color: rgb(209, 209, 209);")
         self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Form)

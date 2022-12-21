@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>847</width>
-    <height>600</height>
+    <width>851</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow{border-image:url(C:/Users/Dell/PycharmProjects/PyQt-game-the-gallows/images/1579273115_39-83.jpg)}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -127,6 +130,9 @@
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string>Выход</string>
      </property>
@@ -148,6 +154,10 @@
        <pointsize>10</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">
+</string>
+     </property>
      <property name="text">
       <string>Правила</string>
      </property>
@@ -162,7 +172,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>847</width>
+     <width>851</width>
      <height>26</height>
     </rect>
    </property>

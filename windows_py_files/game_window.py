@@ -16,10 +16,19 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(8)
         MainWindow.setFont(font)
+        MainWindow.setStyleSheet("#MainWindow{border-image:url(C:/Users/Dell/PycharmProjects/PyQt-game-the-gallows/images/1579273115_39-83.jpg)}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(80, 180, 361, 261))
+        font = QtGui.QFont()
+        font.setPointSize(7)
+        self.widget.setFont(font)
+        self.widget.setStyleSheet(".QPushButton{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    font: 75 8pt \"MS Shell Dlg 2\";\n"
+"    }\n"
+"")
         self.widget.setObjectName("widget")
         self.A_1 = QtWidgets.QPushButton(self.widget)
         self.A_1.setEnabled(True)
@@ -167,7 +176,9 @@ class Ui_MainWindow(object):
         font.setPointSize(18)
         self.lineEdit.setFont(font)
         self.lineEdit.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);")
+"color:  rgb(0, 0, 0);\n"
+"border: 2px solid  #004104;\n"
+"border-radius: 20px;")
         self.lineEdit.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit.setObjectName("lineEdit")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -179,24 +190,36 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName("label_2")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser.setGeometry(QtCore.QRect(90, 450, 671, 101))
+        self.textBrowser.setStyleSheet("border-color: rgb(8, 177, 0);\n"
+"border: 1px solid;")
         self.textBrowser.setObjectName("textBrowser")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_2.setEnabled(True)
         self.lineEdit_2.setGeometry(QtCore.QRect(90, 560, 551, 31))
+        self.lineEdit_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color:  rgb(0, 0, 0);\n"
+"border: 2px solid  #004104;\n"
+"border-radius: 10px;")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setEnabled(True)
-        self.pushButton.setGeometry(QtCore.QRect(650, 560, 111, 33))
+        self.pushButton.setGeometry(QtCore.QRect(650, 560, 111, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("border-color: rgb(27, 149, 0);\n"
+"background-color: rgb(190, 190, 190);\n"
+"border: 1px solid;")
         self.pushButton.setObjectName("pushButton")
         self.graphicsView = QtWidgets.QGraphicsView(self.centralwidget)
         self.graphicsView.setGeometry(QtCore.QRect(500, 150, 261, 241))
+        self.graphicsView.setStyleSheet("border-color: rgb(20, 139, 0);\n"
+"border: 1px solid;\n"
+"")
         self.graphicsView.setObjectName("graphicsView")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 850, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 850, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -248,9 +271,9 @@ class Ui_MainWindow(object):
         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:medium; font-weight:600;\">Чат</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:medium; font-weight:600;\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:6.6pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Чат</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; font-weight:600;\"><br /></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Отправить"))
 
 

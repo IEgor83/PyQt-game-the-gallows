@@ -12,7 +12,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(847, 600)
+        MainWindow.resize(851, 603)
+        MainWindow.setStyleSheet("#MainWindow{border-image:url(C:/Users/Dell/PycharmProjects/PyQt-game-the-gallows/images/1579273115_39-83.jpg)}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -55,6 +56,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_3.setFont(font)
+        self.pushButton_3.setStyleSheet("")
         self.pushButton_3.setObjectName("pushButton_3")
         self.buttonGroup.addButton(self.pushButton_3)
         self.pushButton_2 = QtWidgets.QPushButton(self.frame)
@@ -62,11 +64,13 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("\n"
+"")
         self.pushButton_2.setObjectName("pushButton_2")
         self.buttonGroup.addButton(self.pushButton_2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 847, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 851, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)

@@ -13,6 +13,7 @@ class Game(QMainWindow, game_window.Ui_MainWindow):
         super(Game, self).__init__()
         self.setupUi(self)
 
+
         if role == 'user':
             self.A_1.setEnabled(False)
             self.A_2.setEnabled(False)
