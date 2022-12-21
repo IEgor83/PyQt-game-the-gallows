@@ -105,20 +105,21 @@ def receive():
     while True:
         client, address = server.accept()
         print("Connected with {}".format(str(address)))
-
-        nickname = client.recv(1024).decode()
-
-        nicknames[str(address[1])] = (nickname, str(address[1]))
-        addresses[str(address[1])] = client
-
-        print("Nickname is {}".format(nickname))
-        print(client)
-        print(nicknames)
-
-        thread = threading.Thread(target=servers_view, args=(client, str(address[1])))
+        thread = threading.Thread(target=nick, args=(client, address))
         thread.start()
 
 
-os.system('cls')
+def nick(client, address):
+    nickname = client.recv(1024).decode()
 
+    nicknames[str(address[1])] = (nickname, str(address[1]))
+    addresses[str(address[1])] = client
+
+    print("Nickname is {}".format(nickname))
+    print(client)
+    print(nicknames)
+    servers_view(client, str(address[1]))
+
+
+os.system('cls')
 receive()

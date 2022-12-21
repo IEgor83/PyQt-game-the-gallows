@@ -18,7 +18,7 @@ class Ui_Form(object):
         self.lineEdit.setGeometry(QtCore.QRect(190, 44, 251, 41))
         self.lineEdit.setStyleSheet("border-color: rgb(83, 145, 65);\n"
 "border: 2px solid;\n"
-"borde-radius: 6px;")
+"border-radius: 6px;")
         self.lineEdit.setObjectName("lineEdit")
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(20, 40, 161, 41))

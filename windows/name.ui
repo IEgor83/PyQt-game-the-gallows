@@ -28,7 +28,7 @@
    <property name="styleSheet">
     <string notr="true">border-color: rgb(83, 145, 65);
 border: 2px solid;
-borde-radius: 6px;</string>
+border-radius: 6px;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
