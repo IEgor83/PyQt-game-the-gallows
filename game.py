@@ -189,7 +189,7 @@ class GameMain(Game):
             if not '?' in line:
                 client.send(f'game_over'.encode())
                 msg = QMessageBox(self)
-                msg.setStyleSheet("QLabel{margin-left: -70px}")
+
                 if self.role == 'player':
                     msg.setWindowTitle("Win")
                     msg.setText("Вы выиграли!")
